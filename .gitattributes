@@ -1,0 +1,21 @@
+# Normaliza todo el repositorio a LF y permite a Git detectar texto automáticamente
+* text=auto eol=lf
+
+# Scripts y archivos ejecutables de Unix deben mantenerse en LF
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.env.example text eol=lf
+*.dockerfile text eol=lf
+Dockerfile text eol=lf
+
+# Forzamos CRLF solo donde Windows realmente lo necesita
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Tipos binarios comunes: evita normalización y diffs incorrectos
+*.{png,jpg,jpeg,gif,ico,webp,avif,svgz} binary
+*.{mp3,mp4,avi,mov,ogg} binary
+*.{woff,woff2,ttf,otf,eot} binary
+*.{pdf,zip,gz,bz2,7z,tar} binary
+*.{psd,ai} binary

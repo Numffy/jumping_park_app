@@ -1,7 +1,30 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
 
-# dependencies
+# Logs y reportes
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Entornos/credenciales
+.env*
+.vercel
+.firebase/
+.secrets/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Dependencias
 /node_modules
+/bower_components
 /.pnp
 .pnp.*
 .yarn/*
@@ -10,32 +33,59 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# Salidas de build
+/build
 /.next/
 /out/
+/dist
+/coverage
+/.coverage
+.nyc_output
 
-# production
-/build
-
-# misc
-.DS_Store
+# Archivos de dato temporales
 *.pem
+*.pid
+*.seed
+*.tgz
+*.orig
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
+# Tiposcript/JS tooling
 *.tsbuildinfo
 next-env.d.ts
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.Python
+build/
+develop-eggs/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+.venv/
+ENV/
+env/
+
+# Editors / OS
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+.idea/
